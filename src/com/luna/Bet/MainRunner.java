@@ -16,15 +16,22 @@ public class MainRunner extends JPanel
 		JButton button = new JButton("Test!");
 		add(button);
 		button.addActionListener(this::actionButton);
+		button.setActionCommand("button1");
 		
 		JButton tester2 = new JButton("t");
-		add(button);
-		
+		add(tester2);
+		tester2.addActionListener(this::actionButton);
+		tester2.setActionCommand("button2");
 	}
 	
 	private void actionButton(ActionEvent actionEvent)
 	{
-		System.out.println("It's working :O");
+		if (actionEvent.getActionCommand().equals("button1"))
+		{
+			System.out.println("It's working :O");	
+		}
+		
+		System.out.println("pressed");
 	}
 	
 	public static void main(String[] args)
