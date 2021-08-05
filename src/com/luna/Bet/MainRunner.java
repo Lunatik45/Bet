@@ -15,6 +15,10 @@ public class MainRunner extends JPanel
 		JButton button = new JButton("Test!");
 		add(button);
 		button.addActionListener(this::actionButton);
+		
+		JButton tester2 = new JButton("t");
+		add(button);
+		
 	}
 	
 	private void actionButton(ActionEvent actionEvent)
