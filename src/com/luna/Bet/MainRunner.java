@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 
 public class MainRunner extends JPanel
 {
+	public Map map = new Map();
+	public Territory territory = new Territory();
+
 	public MainRunner()
 	{
 		System.out.println("Running");
@@ -29,5 +32,20 @@ public class MainRunner extends JPanel
 		mainFrame.setContentPane(new MainRunner());
 		mainFrame.setLocationRelativeTo(null);
 		mainFrame.setVisible(true);
+	}
+
+	public class Map
+	{
+
+
+	}
+
+	public class Territory
+	{
+		int id;
+		int player;
+		int troopCount;
+		int[] adjacentTerritories;
+
 	}
 }
