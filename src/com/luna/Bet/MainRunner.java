@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 public class MainRunner extends JPanel
 {
 	public Map map = new Map();
+	public Territory territory = new Territory();
 
 	public MainRunner()
 	{
@@ -35,6 +36,16 @@ public class MainRunner extends JPanel
 
 	public class Map
 	{
+
+
+	}
+
+	public class Territory
+	{
+		int id;
+		int player;
+		int troopCount;
+		int[] adjacentTerritories;
 
 	}
 }
