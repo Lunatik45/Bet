@@ -46,6 +46,7 @@ public class MainRunner extends JPanel
 		int player;
 		int troopCount;
 		int[] adjacentTerritories;
+		boolean fake;
 
 	}
 }
