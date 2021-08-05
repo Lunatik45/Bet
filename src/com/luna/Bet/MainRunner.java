@@ -4,10 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
+import java.util.ArrayList;
+
 public class MainRunner extends JPanel
 {
 	public Map map = new Map();
-	public Territory territory = new Territory();
 
 	public MainRunner()
 	{
@@ -40,6 +41,16 @@ public class MainRunner extends JPanel
 
 	public class Map
 	{
+		ArrayList<Territory> territories = new ArrayList<>();
+
+		Map()
+		{
+			territories.add(new Territory("Argentina"));
+			territories.add(new Territory("Brazil"));
+			territories.add(new Territory("Peru"));
+			territories.add(new Territory("Venezuela"));
+
+		}
 
 
 	}
@@ -47,10 +58,17 @@ public class MainRunner extends JPanel
 	public class Territory
 	{
 		int id;
+		String name;
 		int player;
 		int troopCount;
 		int[] adjacentTerritories;
 		boolean fake;
+
+		Territory(String name)
+		{
+			this.name = name;
+
+		}
 
 	}
 }
