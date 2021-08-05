@@ -46,6 +46,18 @@ public class MainRunner extends JPanel
 		mainFrame.setVisible(true);
 	}
 
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+
+		g.setColor(Color.GREEN);
+		int xpoints[] = {160, 200,300};
+		int ypoints[] = {200, 100, 150};
+		int npoints = 3;
+
+		g.fillPolygon(xpoints, ypoints, npoints); //Venezuela Example
+
+	}
+
 	public class Map
 	{
 		ArrayList<Territory> territories = new ArrayList<>();
