@@ -3,13 +3,12 @@ package com.luna.Bet;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-
 import java.util.ArrayList;
 
 public class MainRunner extends JPanel
 {
 	public Map map = new Map();
-
+	
 	public MainRunner()
 	{
 		System.out.println("Running");
@@ -24,16 +23,6 @@ public class MainRunner extends JPanel
 		tester2.setActionCommand("button2");
 	}
 	
-	private void actionButton(ActionEvent actionEvent)
-	{
-		if (actionEvent.getActionCommand().equals("button1"))
-		{
-			System.out.println("It's working :O");	
-		}
-		
-		System.out.println("pressed");
-	}
-	
 	public static void main(String[] args)
 	{
 		JFrame mainFrame = new JFrame("Bet");
@@ -45,49 +34,62 @@ public class MainRunner extends JPanel
 		mainFrame.setLocationRelativeTo(null);
 		mainFrame.setVisible(true);
 	}
-
-	public void paintComponent(Graphics g) {
+	
+	private void actionButton(ActionEvent actionEvent)
+	{
+		if (actionEvent.getActionCommand().equals("button1"))
+		{
+			System.out.println("It's working :O");
+		}
+		
+		System.out.println("pressed");
+	}
+	
+	public void paintComponent(Graphics g)
+	{
 		super.paintComponent(g);
-
+		
 		g.setColor(Color.GREEN);
-		int xpoints[] = {160, 200,300};
+		int xpoints[] = {160, 200, 300};
 		int ypoints[] = {200, 100, 150};
 		int npoints = 3;
-
+		
 		g.fillPolygon(xpoints, ypoints, npoints); //Venezuela Example
-
+		
 	}
-
+	
 	public class Map
 	{
 		ArrayList<Territory> territories = new ArrayList<>();
-
+		
 		Map()
 		{
-			territories.add(new Territory("Argentina"));
-			territories.add(new Territory("Brazil"));
-			territories.add(new Territory("Peru"));
-			territories.add(new Territory("Venezuela"));
-
+			territories.add(new Territory(0, "Argentina"));
+			territories.add(new Territory(1, "Brazil"));
+			territories.add(new Territory(2, "Peru"));
+			territories.add(new Territory(3, "Venezuela"));
+			
 		}
-
-
+		
+		
 	}
-
+	
+	/*
 	public class Territory
 	{
-		int id;
-		String name;
-		int player;
-		int troopCount;
-		int[] adjacentTerritories;
+		int     id;
+		String  name;
+		int     player;
+		int     troopCount;
+		int[]   adjacentTerritories;
 		boolean fake;
-
+		
 		Territory(String name)
 		{
 			this.name = name;
-
+			
 		}
-
+		
 	}
+	 */
 }
